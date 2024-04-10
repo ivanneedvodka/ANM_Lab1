@@ -21,8 +21,8 @@ The Andrift project follows a well-organized structure. The `/cmd` folder contai
 To install Andrift, follow these steps:
 
 1. Ensure you have Go installed on your machine.
-2. Clone the Andrift repository: `git clone https://github.com/username/andrift.git`.
-3. Navigate to the project directory: `cd andrift`.
+2. Clone the Andrift repository: `git clone https://github.com/ivanneedvodka/ANM_Lab1`.
+3. Navigate to the project directory: `cd ANM_Lab1/andrift`.
 4. Build the application: `go build`.
 5. Run Andrift: `./andrift`.
 
