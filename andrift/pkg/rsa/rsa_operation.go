@@ -10,12 +10,17 @@ import (
 	"os"
 )
 
-func RsaFileEncrypt(publicKeyFilePath, inputFile, outputFile string) error {
+func RsaFileEncrypt(publicKeyFilePath, inputFilePath, outputFile string) error {
 	publicKeyFile, err := os.Open(publicKeyFilePath)
 	if err != nil {
 		return fmt.Errorf("failed to open public key file: %w", err)
 	}
 	defer publicKeyFile.Close()
+
+	inputFile, err := os.ReadFile(inputFilePath)
+	if err != nil {
+		return fmt.Errorf("failed to open input file: %w", err)
+	}
 
 	publicKeyPEM, err := io.ReadAll(publicKeyFile)
 	if err != nil {
